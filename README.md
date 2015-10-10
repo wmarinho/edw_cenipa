@@ -73,7 +73,8 @@ docker logs -f edwcenipa_biserver_1
 ### Acessar Dashboard
 
 http://localhost/pentaho/plugin/cenipa/api/ocorrencias
-
+login: Admin
+Senha: password
 
 ## Demo
 
