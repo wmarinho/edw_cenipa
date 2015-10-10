@@ -11,19 +11,14 @@ Vou apresentar alguns serviços, ferramentas e plataformas que foram utilizados 
 * Docker - https://www.docker.com/ - Plataforma aberta para construir e rodar aplicações distribuídas.
 * Pentaho - http://www.pentaho.com/ e  http://community.pentaho.com/ - Plataforma open source de Big Data, Data Integration e Business Analytics
 
-## Screenshots
+## Screenshot
 ### Visão geral das Ocorrências
-![](http://i.imgur.com/RxCwvo8.png)
+![](https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/demo/RxCwvo8.png)
 
-### Análise de acidentes ocorridos nos últimos 10 anos
-![](http://i.imgur.com/maa4Mfl.png)
-
-### Análise de incidentes graves ocorridos nos últimos 10 anos
-![](http://i.imgur.com/RpQiX8D.png)
 
 ## Demo
 
-![](http://i.imgur.com/RpQiX8D.png)
+![](https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/demo/cenipa-demo.gif)
 
 
 
