@@ -48,7 +48,8 @@ sh install.sh
 
 ### Acessar Dashboard
 
-![](http://localhost/pentaho/plugin/cenipa/api/ocorrencias)
+http://localhost/pentaho/plugin/cenipa/api/ocorrencias
+
 
 ## Demo
 
