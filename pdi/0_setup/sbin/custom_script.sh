@@ -75,4 +75,12 @@ cmd_publisher=$(curl -v -include --user admin:password -F "catalogName=${CTLG}" 
 
 echo ${cmd_publisher}
 
+PAYLOAD="{\"changed\":true,\"usingConnectionPool\":true,\"connectSql\":\"\",\"databaseName\":\"${EDW_DB}\",\"databasePort\":\"5432\",\"hostname\":\"${PGHOST}\",\"name\":\"${EDW_DB}\",\"password\":\"${PGPASSWORD}\",\"username\":\"${PGUSER}\",\"attributes\":{},\"connectionPoolingProperties\":{},\"extraOptions\":{},\"accessType\":\"NATIVE\",\"databaseType\":{\"defaultDatabasePort\":${PGPORT},\"extraOptionsHelpUrl\":\"http://jdbc.postgresql.org/documentation/83/connect.html#connection-parameters\",\"name\":\"PostgreSQL\",\"shortName\":\"POSTGRESQL\",\"supportedAccessTypes\":[\"NATIVE\",\"ODBC\",\"JNDI\"]}}"
+
+URL="http://edw_biserver:8080/pentaho/plugin/data-access/api/connection/add"
+
+cmd_connection=$(curl -v -include --user admin:password -X POST -d ${PAYLOAD} ${URL})
+
+echo ${cmd_connection}
+
 echo $(psql ${PG_CONN} -d ${EDW_DB} -f ${EDW_HOME}/0_setup/db/${EDW_DB}_idx.sql)
