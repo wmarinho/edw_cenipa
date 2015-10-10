@@ -1,8 +1,0 @@
-#!/bin/bash
-AMI=ami-e3106686
-TYPE=t2.micro
-SUBNET=
-KEY=
-SG=pentaho
-
-aws ec2 run-instances --image-id $AMI --instance-type $TYPE --subnet-id $SUBNET --security-groups $SG  --associate-public-ip-address --user-data "file://user-data.sh" --count 1
