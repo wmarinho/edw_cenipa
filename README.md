@@ -1,5 +1,5 @@
 # EDW CENIPA 
-## Modelo BI open source para construção de um Data warehouse com dados abertos do CENIPA
+## Modelo BI open source para construção de um data warehouse com dados abertos do CENIPA
 
 EDW CENIPA é um projeto open source, criado para prover análises dinâmicas de ocorrências aeronáuticas, ocorridas na aviação civil brasileira. O projeto utiliza técnicas e ferramentas de BI, explorando tecnologias inovadoras e de baixo custo. Historicamente, plataformas de Business Intelligence são caras e inviáveis para pequenos projetos. Esses projetos exigem qualificação especializada e custos altos de desenvolvimento. Este trabalho tem a pretensão de quebrar um pouco esta barreira. O que não significa pouca dedicação, empenho e esforço. 
 
