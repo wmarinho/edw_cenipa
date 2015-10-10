@@ -25,3 +25,4 @@ COPY 0_setup ${EDW_HOME}/0_setup
 COPY 2_etl ${EDW_HOME}/2_etl
 COPY 3_schema ${EDW_HOME}/3_schema
 
+
