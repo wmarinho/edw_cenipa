@@ -8,7 +8,7 @@
   <created_user>-</created_user>
   <created_date>2015&#x2f;07&#x2f;05 20&#x3a;43&#x3a;40.863</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2015&#x2f;10&#x2f;10 16&#x3a;16&#x3a;33.000</modified_date>
+  <modified_date>2015&#x2f;10&#x2f;10 16&#x3a;19&#x3a;24.224</modified_date>
     <parameters>
     </parameters>
     <slaveservers>
@@ -204,7 +204,7 @@
       <description/>
       <type>SHELL</type>
       <filename/>
-      <work_directory>&#x2f;tmp</work_directory>
+      <work_directory>&#x7e;&#x2f;</work_directory>
       <arg_from_previous>N</arg_from_previous>
       <exec_per_row>N</exec_per_row>
       <set_logfile>N</set_logfile>
