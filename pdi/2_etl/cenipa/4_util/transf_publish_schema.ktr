@@ -15,7 +15,7 @@
         </parameter>
         <parameter>
             <name>cmd_publisher</name>
-            <default_value>curl -v -include --user &#x24;&#x7b;admin&#x7d;&#x3a;&#x24;&#x7b;password&#x7d; -F &#x22;catalogName&#x3d;&#x24;&#x7b;catalogo&#x7d;&#x22; -F &#x22;overwrite&#x3d;true&#x22;  -F &#x22;xmlaEnabledFlag&#x3d;true&#x22;  F &#x22;parameters&#x3d;DataSource&#x3d;&#x24;&#x7b;ds&#x7d;&#x22; -F &#x22;uploadAnalysis&#x3d;&#x40;&#x24;&#x7b;schema_path&#x7d;&#x22; http&#x3a;&#x2f;&#x2f;&#x24;&#x7b;host&#x7d;&#x3a;&#x24;&#x7b;port&#x7d;&#x2f;pentaho&#x2f;plugin&#x2f;data-access&#x2f;api&#x2f;mondrian&#x2f;postAnalysis</default_value>
+            <default_value>sh &#x2f;opt&#x2f;edw_cenipa&#x2f;0_setup&#x2f;sbin&#x2f;schema_publisher.sh</default_value>
             <description/>
         </parameter>
         <parameter>
@@ -44,13 +44,13 @@
             <description/>
         </parameter>
         <parameter>
-            <name>schema_path</name>
-            <default_value>&#x2f;opt&#x2f;edw_cenipa&#x2f;pdi&#x2f;3_schema&#x2f;cenipa&#x2f;cenipa.mondrian.xml</default_value>
+            <name>publisher</name>
+            <default_value>curl -v -include --user &#x24;&#x7b;admin&#x7d;&#x3a;&#x24;&#x7b;password&#x7d; -F &#x22;catalogName&#x3d;&#x24;&#x7b;catalogo&#x7d;&#x22; -F &#x22;overwrite&#x3d;true&#x22;  -F &#x22;xmlaEnabledFlag&#x3d;true&#x22;  F &#x22;parameters&#x3d;DataSource&#x3d;&#x24;&#x7b;ds&#x7d;&#x22; -F &#x22;uploadAnalysis&#x3d;&#x40;&#x24;&#x7b;schema_path&#x7d;&#x22; http&#x3a;&#x2f;&#x2f;&#x24;&#x7b;host&#x7d;&#x3a;&#x24;&#x7b;port&#x7d;&#x2f;pentaho&#x2f;plugin&#x2f;data-access&#x2f;api&#x2f;mondrian&#x2f;postAnalysis</default_value>
             <description/>
         </parameter>
         <parameter>
-            <name>url</name>
-            <default_value>http&#x3a;&#x2f;&#x2f;&#x24;&#x7b;host&#x7d;&#x3a;&#x24;&#x7b;port&#x7d;&#x2f;pentaho&#x2f;plugin&#x2f;data-access&#x2f;api&#x2f;mondrian&#x2f;postAnalysis</default_value>
+            <name>schema_path</name>
+            <default_value>&#x2f;opt&#x2f;edw_cenipa&#x2f;pdi&#x2f;3_schema&#x2f;cenipa&#x2f;cenipa.mondrian.xml</default_value>
             <description/>
         </parameter>
     </parameters>
@@ -113,7 +113,7 @@
   <created_user>-</created_user>
   <created_date>2015&#x2f;10&#x2f;10 15&#x3a;02&#x3a;33.163</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2015&#x2f;10&#x2f;10 15&#x3a;55&#x3a;58.883</modified_date>
+  <modified_date>2015&#x2f;10&#x2f;10 16&#x3a;29&#x3a;45.819</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -163,18 +163,6 @@
       <field>
         <name>cmd_publisher</name>
         <variable>&#x24;&#x7b;cmd_publisher&#x7d;</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>CatalogName</name>
-        <variable>&#x24;&#x7b;catalogo&#x7d;</variable>
         <type>String</type>
         <format/>
         <currency/>
