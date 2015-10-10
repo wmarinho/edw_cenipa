@@ -39,12 +39,17 @@ chmod +x /usr/local/bin/docker-compose
 
 https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-### Clone do repositório do Projeto
+### Instalar a partir do repositório do projeto
 
 ```
 git clone https://github.com/wmarinho/edw_cenipa.git
 cd edw_cenipa
 sh install.sh
+```
+ou
+
+```
+wget -O - https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/easy_install | sh
 ```
 
 ### Verificar execução dos containers
