@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin title="cenipa" loader="DEFAULT">
+<overlays>
+		<overlay id="startup.cenipa" resourcebundle="content/cenipa/resources/lang/messages">
+			<menubar id="toolsmenu">
+	        	<menuitem id="cenipa" label="${Launcher.cenipa}" command="mantleXulHandler.openUrl('${Launcher.cenipa}','${Launcher.cenipa_TOOLTIP}','plugin/cenipa/api/default')"/>
+	      	</menubar>
+	    </overlay>
+	</overlays>
+	<lifecycle-listener class="pt.webdetails.cpk.CpkLifecycleListener"/>
+	<static-paths>
+		<static-path url="/cenipa/static" localFolder="static"/>
+		<static-path url="/cenipa/resources" localFolder="resources"/>
+	</static-paths>
+	<content-types>
+		<content-type>
+			<title>Cenipa</title>
+			<description></description>
+			<company name="" url="" logo="@PLUGIN_COMPANY_LOGO@"></company>
+		</content-type>
+	</content-types>
+	<content-generator
+		id="cenipa"
+		title="Cenipa"
+		type="cenipa"
+		class="pt.webdetails.cpk.CpkContentGenerator"/>
+	<!-- Menu entry -->
+	<menu-items>
+		<!--<menu-item id="cenipa_main" anchor="tools-submenu" label="Cenipa" command="content/cenipa/" type="MENU_ITEM" how="LAST_CHILD"/>-->
+	</menu-items>
+</plugin>

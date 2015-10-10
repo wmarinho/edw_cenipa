@@ -1,0 +1,306 @@
+<Schema name="Ocorrencias Aeronauticas">
+  <Dimension visible="true" highCardinality="false" name="Aeronave">
+    <Hierarchy name="Ano de Fabricacao" visible="true" hasAll="true" allMemberName="Todos os Anos" allMemberCaption="Todos" allLevelName="Todos" primaryKey="aeronave_sk">
+      <Table name="dim_aeronave" schema="dm">
+      </Table>
+      <Level name="Ano fabricacao" visible="true" column="ano_fabricacao" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Equipamento" visible="true" hasAll="true" allMemberName="Todos os Equipamento" allMemberCaption="Todos" allLevelName="Todos" primaryKey="aeronave_sk">
+      <Table name="dim_aeronave" schema="dm">
+      </Table>
+      <Level name="Equipamento" visible="true" column="equipamento" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Matricula" visible="true" column="matricula" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Quantidade assentos" visible="true" column="quantidade_assentos" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Fabricante" visible="true" hasAll="true" allMemberName="Todos os Fabricantes" allMemberCaption="Todos" allLevelName="Todos" primaryKey="aeronave_sk">
+      <Table name="dim_aeronave" schema="dm">
+      </Table>
+      <Level name="Fabricante" visible="true" column="fabricante" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Modelo" visible="true" column="modelo" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Quantidade fatalidades" visible="true" hasAll="true" allMemberName="Todas as Fatalidades" allMemberCaption="Todos" allLevelName="Todos" primaryKey="aeronave_sk">
+      <Table name="dim_aeronave" schema="dm">
+      </Table>
+      <Level name="Quantidade fatalidades" visible="true" column="quantidade_fatalidades" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Tipo motor" visible="true" hasAll="true" allMemberName="Todos os Tipos" allMemberCaption="Todos" allLevelName="Todos" primaryKey="aeronave_sk">
+      <Table name="dim_aeronave" schema="dm">
+      </Table>
+      <Level name="Tipo motor" visible="true" column="tipo_motor" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Quantidade motores" visible="true" column="quantidade_motores" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Categoria de Aviacao">
+    <Hierarchy name="Categoria de Aviacao" visible="true" hasAll="true" allMemberName="Todas as Categorias" allMemberCaption="Todos" allLevelName="Todos" primaryKey="aeronave_sk">
+      <Table name="dim_aeronave" schema="dm">
+      </Table>
+      <Level name="Categoria de Aviacao" visible="true" column="categoria_aviacao" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Categoria de Registro" visible="true" column="categoria_registro" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Tipo de Operacao">
+    <Hierarchy name="Tipo de Operacao" visible="true" hasAll="true" allMemberName="Todos os Tipos" allMemberCaption="Todos" allLevelName="Todos" primaryKey="aeronave_sk" caption="Tipo de Opera&#231;&#227;o">
+      <Table name="dim_aeronave" schema="dm">
+      </Table>
+      <Level name="Tipo de operacao" visible="true" column="tipo_operacao" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Tipo de Opera&#231;&#227;o">
+      </Level>
+      <Level name="Codigo do Operador" visible="true" column="codigo_operador" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="C&#243;digo do Operador">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Caracteristicas do Voo">
+    <Hierarchy name="Fase operacao" visible="true" hasAll="true" allMemberName="Todas as Fases" allMemberCaption="Todos" allLevelName="Todos" primaryKey="aeronave_sk">
+      <Table name="dim_aeronave" schema="dm">
+      </Table>
+      <Level name="Fase operacao" visible="true" column="fase_operacao" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Destino voo" visible="true" hasAll="true" allMemberName="Todos os Destinos" allMemberCaption="Todos" allLevelName="Todos" primaryKey="aeronave_sk">
+      <Table name="dim_aeronave" schema="dm">
+      </Table>
+      <Level name="Destino voo" visible="true" column="destino_voo" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Origem voo" visible="true" hasAll="true" allMemberName="Todas as Origens" allMemberCaption="Todos" allLevelName="Todos" primaryKey="aeronave_sk">
+      <Table name="dim_aeronave" schema="dm">
+      </Table>
+      <Level name="Origem voo" visible="true" column="origem_voo" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Pais de Registro" visible="true" hasAll="true" allMemberName="Todos os Paises" allMemberCaption="Todos" allLevelName="Todos" primaryKey="aeronave_sk">
+      <Table name="dim_aeronave" schema="dm">
+      </Table>
+      <Level name="Pais registro" visible="true" column="pais_registro" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Peso maximo decolagem" visible="true" hasAll="true" allMemberName="Todos os Pesos" allMemberCaption="Todos" allLevelName="Todos" primaryKey="aeronave_sk">
+      <Table name="dim_aeronave" schema="dm">
+      </Table>
+      <Level name="Peso maximo decolagem" visible="true" column="peso_maximo_decolagem" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Nivel do Dano">
+    <Hierarchy name="Nivel do Dano" visible="true" hasAll="true" primaryKey="aeronave_sk">
+      <Table name="dim_aeronave" schema="dm">
+      </Table>
+      <Level name="Nivel do Dano" visible="true" column="nivel_dano" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Hora">
+    <Hierarchy name="Hora" visible="true" hasAll="true" allMemberName="Todas as Horas" allMemberCaption="Todos" allLevelName="Todos" primaryKey="hora_sk">
+      <Table name="dim_hora" schema="dm">
+      </Table>
+      <Level name="Hora" visible="true" column="int_hora" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Minuto" visible="true" column="int_minuto" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Hora Minuto" visible="true" column="str_hora_minuto" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Turno" visible="true" hasAll="true" allMemberName="Todos os Turnos" allMemberCaption="Todos" allLevelName="Todos" primaryKey="hora_sk">
+      <Table name="dim_hora" schema="dm">
+      </Table>
+      <Level name="Turno" visible="true" column="str_turno_padrao" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Hora" visible="true" column="int_hora" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Ocorrencia" caption="Ocorr&#234;ncia">
+    <Hierarchy name="Aerodromo" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Aerodromo" visible="true" column="aerodromo" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Aeronaves envolvidas" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Aeronaves envolvidas" visible="true" column="aeronaves_envolvidas" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Classificacao" visible="true" hasAll="true" allMemberName="Todas as Classificacoes" allMemberCaption="Todos" allLevelName="Todos" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Classificacao" visible="true" column="classificacao" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Classifica&#231;&#227;o da Ocorr&#234;ncia">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Codigo ocorrencia" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Codigo ocorrencia" visible="true" column="codigo_ocorrencia" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Comando investigador" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Comando investigador" visible="true" column="comando_investigador" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Dia extracao" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Dia extracao" visible="true" column="dia_extracao" type="Date" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Dia ocorrencia" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Dia ocorrencia" visible="true" column="dia_ocorrencia" type="Date" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Dia publicacao" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Dia publicacao" visible="true" column="dia_publicacao" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Hashcode" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Hashcode" visible="true" column="hashcode" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Horario utc" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Horario utc" visible="true" column="horario_utc" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Localidade" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Localidade" visible="true" column="localidade" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Numero relatorio" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Numero relatorio" visible="true" column="numero_relatorio" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Pais" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Pais" visible="true" column="pais" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Quantidade recomendacoes" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Quantidade recomendacoes" visible="true" column="quantidade_recomendacoes" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Relatorio publicado" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Relatorio publicado" visible="true" column="relatorio_publicado" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Saida pista" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Saida pista" visible="true" column="saida_pista" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Sera investigada" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Sera investigada" visible="true" column="sera_investigada" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Status investigacao" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Status investigacao" visible="true" column="status_investigacao" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Tipo de Ocorrencia" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" allLevelName="Todos os Tipos" primaryKey="ocorrencia_sk" caption="Tipo de Ocorr&#234;ncia">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Tipo de Ocorrencia" visible="true" column="tipo" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Tipo de Ocorr&#234;ncia">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Uf" visible="true" hasAll="true" primaryKey="ocorrencia_sk">
+      <Table name="dim_ocorrencia" schema="dm">
+      </Table>
+      <Level name="Uf" visible="true" column="uf" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Periodo" caption="Per&#237;odo">
+    <Hierarchy name="Periodo" visible="true" hasAll="true" allMemberName="Todos os Periodos" allMemberCaption="Todos" allLevelName="Todos" primaryKey="data_sk" caption="Per&#237;odo">
+      <Table name="dim_tempo" schema="dm">
+      </Table>
+      <Level name="Ano" visible="true" column="int_ano" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Mes" visible="true" column="int_mes" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Dia" visible="true" column="int_dia" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Dia da Semana" visible="true" hasAll="true" allMemberName="Todos os Dias" allMemberCaption="Todos" allLevelName="Todos" primaryKey="data_sk">
+      <Table name="dim_tempo" schema="dm">
+      </Table>
+      <Level name="Dia da Semana" visible="true" column="str_dia_semana_abrev" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Data" visible="true" column="str_desc_dia" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Trimestre" visible="true" hasAll="true" allMemberName="Todos os Trimestres" allMemberCaption="Todos" allLevelName="Todos" primaryKey="data_sk">
+      <Table name="dim_tempo" schema="dm">
+      </Table>
+      <Level name="Ano" visible="true" column="int_ano" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Ano Trimestre" visible="true" column="str_ano_trimestre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Ocorrencias Aeronauticas" caption="Ocorr&#234;ncias Aeron&#225;uticas" visible="true" cache="true" enabled="true">
+    <Table name="fato_ocorrencia" schema="dm">
+    </Table>
+    <DimensionUsage source="Periodo" name="Periodo" caption="Per&#237;odo" visible="true" foreignKey="data_ocorrencia_sk" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Hora" name="Hora" visible="true" foreignKey="hora_ocorrencia_sk" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Categoria de Aviacao" name="Categoria de Aviacao" visible="true" foreignKey="aeronave_sk" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Aeronave" name="Aeronave" visible="true" foreignKey="aeronave_sk" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Caracteristicas do Voo" name="Caracteristicas do Voo" visible="true" foreignKey="aeronave_sk" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Ocorrencia" name="Ocorrencia" caption="Ocorr&#234;ncia" visible="true" foreignKey="ocorrencia_sk" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tipo de Operacao" name="Tipo de Operacao" caption="Tipo de Opera&#231;&#227;o" visible="true" foreignKey="aeronave_sk" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Nivel do Dano" name="Nivel do Dano" caption="Nivel do Dano" visible="true" foreignKey="aeronave_sk" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Quantidade de Ocorrencias" column="ocorrencia_sk" formatString="#" aggregator="count">
+    </Measure>
+    <Measure name="Quantidade de Aeronaves" column="codigo_aeronave" formatString="#" aggregator="distinct count">
+    </Measure>
+    <Measure name="Quantidade de Aeronaves Envolvidas" column="aeronaves_envolvidas" formatString="#" aggregator="sum">
+    </Measure>
+    <Measure name="Quantidade de Recomendacoes" column="quantidade_recomendacoes" formatString="#" aggregator="sum">
+    </Measure>
+    <Measure name="Quantidade de Fatalidades" column="quantidade_fatalidades" formatString="#" aggregator="sum">
+    </Measure>
+    <Measure name="Quantidade de Assentos" column="quantidade_assentos" formatString="#" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Taxa de Ocorrencias por Aeronave" formatString="#,###,0" caption="Taxa de Ocorr&#234;ncias por Aeronave" formula="[Measures].[Quantidade de Ocorrencias]/[Measures].[Quantidade de Aeronaves]" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+</Schema>

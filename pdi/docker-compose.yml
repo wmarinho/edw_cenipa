@@ -1,0 +1,14 @@
+pdi:
+  image: image_cenipa/pdi
+  volumes:
+    - /tmp/stage:/opt/edw_cenipa/stage
+  environment:
+    - AWS_ACCESS_KEY_ID=
+    - AWS_SECRET_ACCESS_KEY=
+    - AWS_DEFAULT_REGION=
+    - PGHOST=172.17.42.1
+    - PGUSER=pgadmin
+    - PGPASSWORD=pgadmin.
+    - PENTAHO_DI_JAVA_OPTIONS=-Xmx2014m -XX:MaxPermSize=256m
+  stdin_open: true
+  tty: true
