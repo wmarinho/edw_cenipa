@@ -22,11 +22,11 @@ Seguem alguns serviços, ferramentas e plataformas que foram utilizados para con
 
 * Instalar Docker v1.7.1
 
-CentOS: https://docs.docker.com/installation/centos/
+  CentOS: https://docs.docker.com/installation/centos/
 
-Ubuntu: https://docs.docker.com/installation/ubuntulinux/
+  Ubuntu: https://docs.docker.com/installation/ubuntulinux/
 
-Max : https://docs.docker.com/installation/mac/
+  Max : https://docs.docker.com/installation/mac/
 
 * Instalar Docker Compose v1.4.2 - https://docs.docker.com/compose/install/
 ```
@@ -48,7 +48,7 @@ sh install.sh
 
 ### Acessar Dashboard
 
-http://localhost/pentaho/plugin/cenipa/api/ocorrencias
+![](http://localhost/pentaho/plugin/cenipa/api/ocorrencias)
 
 ## Demo
 
