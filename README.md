@@ -63,9 +63,12 @@ O projeto possui 3 containers especificados no arquivo docker-compose.yml:
 * edwcenipa_pdi_1 - Container com instlação do Pentaho Data Integrator (Kettle) para download e carga dados para o DW
 * edwcenipa_biserver_1 - Container com instalação do Pentaho Business Analytics (BI Server)
 
+### Verificar logs do PDI e do BI Server
 
-
-
+```
+docker logs -f edwcenipa_pdi_1
+docker logs -f edwcenipa_biserver_1
+```
 
 ### Acessar Dashboard
 
