@@ -47,6 +47,26 @@ cd edw_cenipa
 sh install.sh
 ```
 
+### Verificar containers
+```
+$ docker ps
+
+CONTAINER ID        IMAGE                          COMMAND                CREATED             STATUS              PORTS                    NAMES
+29bd63632c21        image_cenipa/biserver:latest   "sh scripts/run.sh"    2 hours ago         Up 2 hours          0.0.0.0:80->8080/tcp     edwcenipa_biserver_1
+53b84cbc80e4        image_cenipa/pdi:latest        "./run.sh"             2 hours ago         Up 2 hours          8181/tcp                 edwcenipa_pdi_1
+7787dcfe49df        wmarinho/postgresql:9.3        "/usr/lib/postgresql   2 hours ago         Up 2 hours          0.0.0.0:5432->5432/tcp   edwcenipa_db_1
+```
+
+O projeto possui 3 containers especificados no arquivo docker-compose.yml:
+
+* edwcenipa_db_1 - Container com Banco de Dados PostgreSQL
+* edwcenipa_pdi_1 - Container com instlação do Pentaho Data Integrator (Kettle) para download e carga dados para o DW
+* edwcenipa_biserver_1 - Container com instalação do Pentaho Business Analytics (BI Server)
+
+
+
+
+
 ### Acessar Dashboard
 
 http://localhost/pentaho/plugin/cenipa/api/ocorrencias
