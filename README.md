@@ -26,7 +26,7 @@ Seguem alguns serviços, ferramentas e plataformas que foram utilizados para con
 
   Ubuntu: https://docs.docker.com/installation/ubuntulinux/
 
-  Max : https://docs.docker.com/installation/mac/
+  Mac : https://docs.docker.com/installation/mac/
 
 * Instalar Docker Compose v1.4.2 - https://docs.docker.com/compose/install/
 ```
