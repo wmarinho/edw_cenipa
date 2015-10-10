@@ -47,7 +47,7 @@ cd edw_cenipa
 sh install.sh
 ```
 
-### Verificar containers
+### Verificar execução dos containers
 ```
 $ docker ps
 
