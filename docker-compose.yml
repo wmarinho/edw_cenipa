@@ -8,7 +8,7 @@ pdi:
     - PGHOST=172.17.42.1
     - PGUSER=pgadmin
     - PGPASSWORD=pgadmin.
-    - PENTAHO_DI_JAVA_OPTIONS=-Xmx2014m -XX:MaxPermSize=256m
+#    - PENTAHO_DI_JAVA_OPTIONS=-Xmx2014m -XX:MaxPermSize=256m
   stdin_open: true
   tty: true
 biserver:
