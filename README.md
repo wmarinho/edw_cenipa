@@ -21,9 +21,12 @@ Seguem alguns serviços, ferramentas e plataformas que foram utilizados para con
 ### Requisitos
 
 * Instalar Docker v1.7.1
-** CentOS: https://docs.docker.com/installation/centos/
-** Ubuntu: https://docs.docker.com/installation/ubuntulinux/
-** Max : https://docs.docker.com/installation/mac/
+
+CentOS: https://docs.docker.com/installation/centos/
+
+Ubuntu: https://docs.docker.com/installation/ubuntulinux/
+
+Max : https://docs.docker.com/installation/mac/
 
 * Instalar Docker Compose v1.4.2 - https://docs.docker.com/compose/install/
 ```
@@ -32,7 +35,8 @@ chmod +x /usr/local/bin/docker-compose
 ```
 
 * Instalar o GIT
-** https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
 ### Clone do repositório do Projeto
 
