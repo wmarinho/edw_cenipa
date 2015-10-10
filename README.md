@@ -20,6 +20,7 @@ Seguem alguns serviços, ferramentas e plataformas que foram utilizados para con
 
 ### Requisitos
 
+* Sistema Operacional com 2GB de RAM
 * Instalar Docker v1.7.1
 
   CentOS: https://docs.docker.com/installation/centos/
