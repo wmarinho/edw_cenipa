@@ -58,10 +58,21 @@ echo $(psql ${PG_CONN} -d ${EDW_DB} -f ${EDW_HOME}/0_setup/db/${EDW_DB}.sql)
 mkdir -p ${LOCAL_S3_STAGE}
 
 # Get files from S3
-aws s3 sync ${AWS_S3_STAGE} ${LOCAL_S3_STAGE}
+#aws s3 sync ${AWS_S3_STAGE} ${LOCAL_S3_STAGE}
 
 # Run job
 sh kitchen.sh -rep=edw_cenipa -job=/base/3_cargas/job_carga_base -level=Basic
 sh kitchen.sh -rep=edw_cenipa -job=/cenipa/3_cargas/job_carga_cenipa -level=Basic
+
+echo "Publicando cubo ..."
+
+CTLG="Ocorrencias Aeronauticas"
+DS="edw_cenipa"
+URL="http://edw_biserver:8080/pentaho/plugin/data-access/api/mondrian/postAnalysis"
+SCHEMA="${EDW_HOME}/3_schema/cenipa/cenipa.mondrian.xml"
+
+cmd_publisher=$(curl -v -include --user admin:password -F "catalogName=${CTLG}" -F "overwrite=true"  -F "xmlaEnabledFlag=true" -F "parameters=DataSource=${DS}" -F "uploadAnalysis=@${SCHEMA}" ${URL})
+
+echo ${cmd_publisher}
 
 echo $(psql ${PG_CONN} -d ${EDW_DB} -f ${EDW_HOME}/0_setup/db/${EDW_DB}_idx.sql)
