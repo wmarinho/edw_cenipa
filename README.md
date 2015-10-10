@@ -5,7 +5,7 @@ EDW CENIPA é um projeto open source, criado para prover análises dinâmicas de
 
 Todas as análises têm como base os dados abertos fornecidos pelo CENIPA, com histórico de ocorrências nos últimos 10 anos ( http://dados.gov.br/dataset/ocorrencias-aeronauticas-da-aviacao-civil-brasileira). Os gráficos foram inspirados no relatório disponibilizado no link http://www.cenipa.aer.mil.br/cenipa/index.php/estatisticas/estatisticas/panorama.
 
-Vou apresentar alguns serviços, ferramentas e plataformas que foram utilizados para construir e testar este ambiente.
+Seguem alguns serviços, ferramentas e plataformas que foram utilizados para construir e testar este ambiente.
  
 * Amazon Web Services - https://aws.amazon.com/ - Serviços de infraestrutura de nuvem
 * Docker - https://www.docker.com/ - Plataforma aberta para construir e rodar aplicações distribuídas.
