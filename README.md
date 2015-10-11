@@ -3,7 +3,7 @@
 
 EDW CENIPA é um projeto open source, criado para prover análises dinâmicas de ocorrências aeronáuticas, ocorridas na aviação civil brasileira. O projeto utiliza técnicas e ferramentas de BI, explorando tecnologias inovadoras e de baixo custo. Historicamente, plataformas de Business Intelligence são caras e inviáveis para pequenos projetos. Esses projetos exigem qualificação especializada e custos altos de desenvolvimento. Este trabalho tem a pretensão de quebrar um pouco esta barreira. O que não significa pouca dedicação, empenho e esforço. 
 
-Todas as análises têm como base os dados abertos fornecidos pelo CENIPA, com histórico de ocorrências nos últimos 10 anos ( http://dados.gov.br/dataset/ocorrencias-aeronauticas-da-aviacao-civil-brasileira). Os gráficos foram inspirados no relatório disponibilizado no link http://www.cenipa.aer.mil.br/cenipa/index.php/estatisticas/estatisticas/panorama.
+Todas as análises têm como base os dados abertos fornecidos pelo CENIPA, com histórico de ocorrências dos últimos 10 anos ( http://dados.gov.br/dataset/ocorrencias-aeronauticas-da-aviacao-civil-brasileira). Os gráficos foram inspirados no relatório disponibilizado no link http://www.cenipa.aer.mil.br/cenipa/index.php/estatisticas/estatisticas/panorama.
 
 Seguem alguns serviços, ferramentas e plataformas que foram utilizados para construir e testar este ambiente.
  
