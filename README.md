@@ -86,9 +86,9 @@ docker logs -f edwcenipa_biserver_1
 ```
 A instalação pode mais de 30 minutos, dependo da configuração do servidor e da largura de banda da Internet. A instalação completa é de aproximadamente 3GB. 
 
-Com o comando abaixo e as devidas credenciais de acesso, é possível subir o ambiente em menos de 10 minutos.
+Com o comando abaixo e as devidas credenciais de acesso, é possível subir o ambiente na Amazon em menos de 10 minutos. LEMBRE-SE de substituir as variáveis antes de executar o comando. Essa é uma configuração adequada para este projeto, a um custo aproximado de US$ 80,00/mês (http://calculator.s3.amazonaws.com/index.html)
 ```
-aws ec2 run-instances --image-id ami-e3106686 --instance-type c4.large --subnet-id ${SUBNET_ID} --security-group-ids ${SGROUP_IDS}  --key-name ${KEY_NME} --associate-public-ip-address --user-data "https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/aws/user-data.sh" --count 1
+aws ec2 run-instances --image-id ami-e3106686 --instance-type c4.large --subnet-id ${SUBNET_ID} --security-group-ids ${SGROUP_IDS}  --key-name ${KEY_NAME} --associate-public-ip-address --user-data "https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/aws/user-data.sh" --count 1
 ```
 
 
