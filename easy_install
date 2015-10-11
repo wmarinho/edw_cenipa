@@ -1,0 +1,6 @@
+#!/bin/bash
+
+git clone https://github.com/wmarinho/edw_cenipa.git
+cd edw_cenipa
+sh ./install.sh
+

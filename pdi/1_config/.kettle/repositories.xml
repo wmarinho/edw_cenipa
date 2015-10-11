@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories>
+ 
+  <repository>    <id>KettleFileRepository</id>
+    <name>edw_cenipa</name>
+    <description>EDW Template</description>
+    <base_directory>/opt/edw_cenipa/2_etl</base_directory>
+    <read_only>N</read_only>
+    <hides_hidden_files>N</hides_hidden_files>
+  </repository>  </repositories>

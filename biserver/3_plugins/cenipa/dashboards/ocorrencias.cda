@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="total_ocorrencias" type="mondrian.jndi">
+         <Catalog>mondrian:/Ocorrencias+Aeronauticas</Catalog>
+         <Jndi>edw_cenipa</Jndi>
+      </Connection>
+      <Connection id="ocorrencias" type="mondrian.jndi">
+         <Catalog>mondrian:/Ocorrencias+Aeronauticas</Catalog>
+         <Jndi>edw_cenipa</Jndi>
+      </Connection>
+      <Connection id="classificacao_ocorrencia_total" type="mondrian.jndi">
+         <Catalog>mondrian:/Ocorrencias+Aeronauticas</Catalog>
+         <Jndi>edw_cenipa</Jndi>
+      </Connection>
+      <Connection id="classificacao_ocorrencia" type="mondrian.jndi">
+         <Catalog>mondrian:/Ocorrencias+Aeronauticas</Catalog>
+         <Jndi>edw_cenipa</Jndi>
+      </Connection>
+      <Connection id="categoria_aeronave" type="mondrian.jndi">
+         <Catalog>mondrian:/Ocorrencias+Aeronauticas</Catalog>
+         <Jndi>edw_cenipa</Jndi>
+      </Connection>
+      <Connection id="tipo_equipamento" type="mondrian.jndi">
+         <Catalog>mondrian:/Ocorrencias+Aeronauticas</Catalog>
+         <Jndi>edw_cenipa</Jndi>
+      </Connection>
+      <Connection id="danos" type="mondrian.jndi">
+         <Catalog>mondrian:/Ocorrencias+Aeronauticas</Catalog>
+         <Jndi>edw_cenipa</Jndi>
+      </Connection>
+      <Connection id="fase_operacao" type="mondrian.jndi">
+         <Catalog>mondrian:/Ocorrencias+Aeronauticas</Catalog>
+         <Jndi>edw_cenipa</Jndi>
+      </Connection>
+      <Connection id="tipo_ocorrencia" type="mondrian.jndi">
+         <Catalog>mondrian:/Ocorrencias+Aeronauticas</Catalog>
+         <Jndi>edw_cenipa</Jndi>
+      </Connection>
+      <Connection id="localidade_ocorrencia" type="mondrian.jndi">
+         <Catalog>mondrian:/Ocorrencias+Aeronauticas</Catalog>
+         <Jndi>edw_cenipa</Jndi>
+      </Connection>
+      <Connection id="ocorrencia_fabricante" type="mondrian.jndi">
+         <Catalog>mondrian:/Ocorrencias+Aeronauticas</Catalog>
+         <Jndi>edw_cenipa</Jndi>
+      </Connection>
+      <Connection id="fatalidades" type="mondrian.jndi">
+         <Catalog>mondrian:/Ocorrencias+Aeronauticas</Catalog>
+         <Jndi>edw_cenipa</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="total_ocorrencias" id="total_ocorrencias"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="Todos os Periodos" name="ano" type="String"/>
+      </Parameters>
+      <Query>WITH&#xD;
+SET [~ROWS] AS&#xD;
+    Order({[Periodo].[${ano}]}, [Measures].[Quantidade de Ocorrencias], ASC)&#xD;
+SELECT&#xD;
+NON EMPTY {[Measures].[Quantidade de Ocorrencias]} ON COLUMNS,&#xD;
+NON EMPTY [~ROWS] ON ROWS&#xD;
+FROM [Ocorrencias Aeronauticas]</Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ocorrencias" id="ocorrencias" type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="ano" type="String"/>
+         <Parameter default="" name="classificacao" type="String"/>
+      </Parameters>
+      <Query>WITH&#xD;
+SET [~FILTER] AS&#xD;
+    {[Ocorrencia.Classificacao].[${classificacao}]}&#xD;
+SET [~ROWS] AS&#xD;
+    Order({[Periodo].[${ano}]}, [Measures].[Quantidade de Ocorrencias], ASC)&#xD;
+SELECT&#xD;
+NON EMPTY {[Measures].[Quantidade de Ocorrencias]} ON COLUMNS,&#xD;
+NON EMPTY [~ROWS] ON ROWS&#xD;
+FROM [Ocorrencias Aeronauticas]&#xD;
+WHERE [~FILTER]</Query>
+   </DataAccess>
+   <DataAccess access="public" connection="classificacao_ocorrencia_total"
+               id="classificacao_ocorrencia_total"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query>WITH&#xD;
+SET [~COLUMNS] AS&#xD;
+    {[Periodo].[Todos os Periodos]}&#xD;
+SET [~ROWS] AS&#xD;
+    Order({[Ocorrencia.Classificacao].[Classificacao].Members}, [Measures].[Quantidade de Ocorrencias], DESC)&#xD;
+SELECT&#xD;
+NON EMPTY [~COLUMNS] ON COLUMNS,&#xD;
+NON EMPTY [~ROWS] ON ROWS&#xD;
+FROM [Ocorrencias Aeronauticas]</Query>
+   </DataAccess>
+   <DataAccess access="public" connection="classificacao_ocorrencia"
+               id="classificacao_ocorrencia"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query>WITH&#xD;
+SET [~COLUMNS] AS&#xD;
+    Order({[Ocorrencia.Classificacao].[Classificacao].Members}, [Measures].[Quantidade de Ocorrencias], DESC)&#xD;
+SET [~ROWS] AS&#xD;
+    {[Periodo].[Ano].Members}&#xD;
+SELECT&#xD;
+NON EMPTY [~COLUMNS] ON COLUMNS,&#xD;
+NON EMPTY [~ROWS] ON ROWS&#xD;
+FROM [Ocorrencias Aeronauticas]</Query>
+   </DataAccess>
+   <DataAccess access="public" connection="categoria_aeronave" id="categoria_aeronave"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="classificacao" type="String"/>
+         <Parameter default="" name="ano" type="String"/>
+      </Parameters>
+      <Query>WITH&#xD;
+SET [~FILTER] AS&#xD;
+    CrossJoin({[Ocorrencia.Classificacao].[${classificacao}]}, {[Periodo].[${ano}]})&#xD;
+&#xD;
+SET [Top] AS&#xD;
+(TOPCOUNT({ ORDER( HIERARCHIZE( {[Categoria de Aviacao].[Categoria de Registro].Members}), ([Measures].[Quantidade de Ocorrencias]), BDESC ) },9))&#xD;
+MEMBER [Categoria de Aviacao].[OUTROS] AS (AGGREGATE({EXCEPT([Categoria de Aviacao].[Categoria de Registro].Members, [Top])}))&#xD;
+&#xD;
+SELECT&#xD;
+NON EMPTY {[Measures].[Quantidade de Ocorrencias]} ON COLUMNS,&#xD;
+NON EMPTY {[Top],[Categoria de Aviacao].[OUTROS]} ON ROWS&#xD;
+FROM [Ocorrencias Aeronauticas]&#xD;
+WHERE [~FILTER]</Query>
+   </DataAccess>
+   <DataAccess access="public" connection="tipo_equipamento" id="tipo_equipamento" type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="classificacao" type="String"/>
+         <Parameter default="" name="ano" type="String"/>
+      </Parameters>
+      <Query>WITH&#xD;
+SET [~FILTER] AS&#xD;
+    CrossJoin({[Ocorrencia.Classificacao].[${classificacao}]}, {[Periodo].[${ano}]})&#xD;
+SET [~ROWS] AS&#xD;
+    Order({[Aeronave.Equipamento].[Equipamento].Members}, [Measures].[Quantidade de Ocorrencias], DESC)&#xD;
+SELECT&#xD;
+NON EMPTY {[Measures].[Quantidade de Ocorrencias]} ON COLUMNS,&#xD;
+NON EMPTY [~ROWS] ON ROWS&#xD;
+FROM [Ocorrencias Aeronauticas]&#xD;
+WHERE [~FILTER]</Query>
+   </DataAccess>
+   <DataAccess access="public" connection="danos" id="danos" type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="classificacao" type="String"/>
+         <Parameter default="" name="ano" type="String"/>
+      </Parameters>
+      <Query>WITH&#xD;
+SET [~FILTER] AS&#xD;
+    CrossJoin({[Ocorrencia.Classificacao].[${classificacao}]}, {[Periodo].[${ano}]})&#xD;
+SET [~ROWS] AS&#xD;
+    Order({[Nivel do Dano].[Nivel do Dano].Members}, [Measures].[Quantidade de Ocorrencias], DESC)&#xD;
+SELECT&#xD;
+NON EMPTY {[Measures].[Quantidade de Ocorrencias]} ON COLUMNS,&#xD;
+NON EMPTY [~ROWS] ON ROWS&#xD;
+FROM [Ocorrencias Aeronauticas]&#xD;
+WHERE [~FILTER]</Query>
+   </DataAccess>
+   <DataAccess access="public" connection="fase_operacao" id="fase_operacao" type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="classificacao" type="String"/>
+         <Parameter default="" name="ano" type="String"/>
+      </Parameters>
+      <Query>WITH&#xD;
+SET [~FILTER] AS&#xD;
+    CrossJoin({[Ocorrencia.Classificacao].[${classificacao}]}, {[Periodo].[${ano}]})&#xD;
+SET [Top] AS&#xD;
+(TOPCOUNT({ ORDER( HIERARCHIZE( {[Caracteristicas do Voo.Fase operacao].[Fase operacao].Members}), ([Measures].[Quantidade de Ocorrencias]), BDESC ) },10))&#xD;
+MEMBER [Caracteristicas do Voo.Fase operacao].[OUTROS] AS (AGGREGATE({EXCEPT([Caracteristicas do Voo.Fase operacao].[Fase operacao].Members, [Top])}))&#xD;
+&#xD;
+SELECT&#xD;
+NON EMPTY {[Measures].[Quantidade de Ocorrencias]} ON COLUMNS,&#xD;
+NON EMPTY {[Caracteristicas do Voo.Fase operacao].[OUTROS],[Top]} ON ROWS&#xD;
+FROM [Ocorrencias Aeronauticas]&#xD;
+WHERE [~FILTER]</Query>
+   </DataAccess>
+   <DataAccess access="public" connection="tipo_ocorrencia" id="tipo_ocorrencia" type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="classificacao" type="String"/>
+         <Parameter default="" name="ano" type="String"/>
+      </Parameters>
+      <Query>WITH&#xD;
+SET [~FILTER] AS&#xD;
+    CrossJoin({[Ocorrencia.Classificacao].[${classificacao}]}, {[Periodo].[${ano}]})&#xD;
+&#xD;
+&#xD;
+SET [Top] AS&#xD;
+(TOPCOUNT({ ORDER( HIERARCHIZE( {[Ocorrencia.Tipo de Ocorrencia].[Tipo de Ocorrencia].Members}), ([Measures].[Quantidade de Ocorrencias]), BDESC ) },14))&#xD;
+MEMBER [Ocorrencia.Tipo de Ocorrencia].[OUTROS] AS (AGGREGATE({EXCEPT([Ocorrencia.Tipo de Ocorrencia].[Tipo de Ocorrencia].Members, [Top])}))&#xD;
+&#xD;
+SELECT&#xD;
+NON EMPTY {[Measures].[Quantidade de Ocorrencias]} ON COLUMNS,&#xD;
+NON EMPTY {[Ocorrencia.Tipo de Ocorrencia].[OUTROS],[Top]} ON ROWS&#xD;
+FROM [Ocorrencias Aeronauticas]&#xD;
+WHERE [~FILTER]</Query>
+   </DataAccess>
+   <DataAccess access="public" connection="localidade_ocorrencia" id="localidade_ocorrencia"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="classificacao" type="String"/>
+         <Parameter default="" name="ano" type="String"/>
+      </Parameters>
+      <Query>WITH&#xD;
+SET [~FILTER] AS&#xD;
+    CrossJoin({[Ocorrencia.Classificacao].[${classificacao}]}, {[Periodo].[${ano}]})&#xD;
+&#xD;
+&#xD;
+SET [Top] AS&#xD;
+(TOPCOUNT({ ORDER( HIERARCHIZE( {[Ocorrencia.Uf].[Uf].Members}), ([Measures].[Quantidade de Ocorrencias]), BDESC ) },13))&#xD;
+MEMBER [Ocorrencia.Uf].[OUTROS] AS (AGGREGATE({EXCEPT([Ocorrencia.Uf].[Uf].Members, [Top])}))&#xD;
+&#xD;
+SELECT&#xD;
+NON EMPTY {[Measures].[Quantidade de Ocorrencias]} ON COLUMNS,&#xD;
+NON EMPTY {[Ocorrencia.Uf].[OUTROS],[Top]} ON ROWS&#xD;
+FROM [Ocorrencias Aeronauticas]&#xD;
+WHERE [~FILTER]</Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ocorrencia_fabricante" id="ocorrencia_fabricante"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="classificacao" type="String"/>
+         <Parameter default="" name="ano" type="String"/>
+      </Parameters>
+      <Query>WITH&#xD;
+SET [~FILTER] AS&#xD;
+    CrossJoin({[Ocorrencia.Classificacao].[${classificacao}]}, {[Periodo].[${ano}]})&#xD;
+&#xD;
+SET [~COLUMNS] AS&#xD;
+    Order(TopCount({[Aeronave.Fabricante].[Fabricante].Members}, 10, [Measures].[Quantidade de Ocorrencias]), [Measures].[Quantidade de Ocorrencias], DESC)&#xD;
+SET [~ROWS] AS&#xD;
+    {[Aeronave.Ano de Fabricacao].[Ano fabricacao].Members}&#xD;
+SELECT&#xD;
+NON EMPTY [~COLUMNS] ON COLUMNS,&#xD;
+NON EMPTY [~ROWS] ON ROWS&#xD;
+FROM [Ocorrencias Aeronauticas]&#xD;
+WHERE [~FILTER]</Query>
+   </DataAccess>
+   <DataAccess access="public" connection="fatalidades" id="fatalidades" type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query>WITH
+SET [~ROWS] AS
+    {[Periodo].[Ano].Members}
+SELECT
+NON EMPTY {[Measures].[Quantidade de Fatalidades]} ON COLUMNS,
+NON EMPTY [~ROWS] ON ROWS
+FROM [Ocorrencias Aeronauticas]</Query>
+   </DataAccess>
+</CDADescriptor>

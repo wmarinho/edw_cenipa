@@ -1,0 +1,32 @@
+pdi:
+  image: image_cenipa/pdi
+  links:
+     - biserver:edw_biserver
+  volumes:
+    - /data/stage:/tmp/stage
+  environment:
+    - PGHOST=172.17.42.1
+    - PGUSER=pgadmin
+    - PGPASSWORD=pgadmin.
+    - PENTAHO_DI_JAVA_OPTIONS=-Xmx2014m -XX:MaxPermSize=256m
+  stdin_open: true
+  tty: true
+biserver:
+  image: image_cenipa/biserver
+  ports:
+    - "80:8080"
+  links:
+    - db:edw_db
+  environment:
+    - PGUSER=pgadmin
+    - PGPASSWORD=pgadmin.
+    - INSTALL_PLUGIN=saiku
+    - CUSTOM_LAYOUT=y
+  stdin_open: true
+  tty: true
+db:
+  image: wmarinho/postgresql:9.3
+  ports:
+    - "5432:5432"
+  stdin_open: false
+  tty: true

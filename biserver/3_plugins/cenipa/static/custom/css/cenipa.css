@@ -1,0 +1,154 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+/*
+ * WDStyleGuide Template CSS  
+ *
+ * Use this as a template to format the styles of specific projects. Most of 
+ * the most commonly used classes/rules are already written here. The file is
+ * divided in the following sections:
+ *
+ *    Fonts
+ *    Style Resets
+ *    1. BACKGROUND 
+ *    2. HEADER 
+ *    3. FILTER CELLS
+ *    4. DATA CELLS
+ *    5. TABLES
+ *    6. CHARTS 
+ *    7. SELECTORS AND BUTTONS 
+ *    Other 
+ *    Project Specific Items  
+ *
+*/
+
+
+/* =============================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+    font-family: 'Gudea';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gudea'), url('http://themes.googleusercontent.com/static/fonts/gudea/v1/kfCeUiT0HGXHQC8YVeaKy6CWcynf_cDxXwCLxiixG1c.woff') format('woff');
+}
+
+
+/* =============================================================================
+   Style Resets
+   ========================================================================== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  /*margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Open Sans, Arial, sans-serif;*/
+}
+
+.WDhidden{
+    display:none;
+}
+
+
+
+
+/* =============================================================================
+   1. BACKGROUND 
+   ========================================================================== */
+
+/* Window Background */
+body{
+    font-family: Gudea;
+    /*background: #dee8ec; */
+}
+
+/* =============================================================================
+   2. HEADER 
+   ========================================================================== */
+   /*
+.cpkHeader {
+    height: 70px;
+    background: url(../img/cpkHeaderBackground.png) no-repeat scroll center 36px;
+    z-index: 100;
+
+    margin-right:auto;
+    margin-left:auto;
+    width: 1018px;
+
+    margin-bottom:-9px;
+    padding-bottom: 10px;
+    padding-left: 34px;
+    padding-right:34px;
+    position: relative;
+    display:block;
+    
+}
+
+.cpkLogo {
+    background: url(../img/pluginLogo.png) no-repeat right bottom;
+    height: 15px;
+    margin-top: 50px;
+    display:inline-block;
+}
+
+.cpkSmall {
+    font-size: 11px;
+    margin-top: 52px;
+    height: 15px;
+    display:inline-block;
+}
+
+.cpkVersion {
+    font-size: 11px;
+    color: #B3BFC4;
+    margin-top: 52px;
+    height: 15px;
+    display:inline-block;
+}
+
+*/
+
+/* =============================================================================
+   3. FILTER CELLS
+   ========================================================================== */
+
+/* =============================================================================
+   4. DATA CELLS
+   ========================================================================== */
+
+/* =============================================================================
+   5. TABLES
+   ========================================================================== */
+
+/* =============================================================================
+   6. CHARTS 
+   ========================================================================== */
+
+/* =============================================================================
+   7. SELECTORS AND BUTTONS 
+   ========================================================================== */
+
+/* =============================================================================
+   Other 
+   ========================================================================== */
+/*
+
+
+
+/* =============================================================================
+   Project Specific Items 
+   ========================================================================== */
