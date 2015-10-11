@@ -90,7 +90,7 @@ Com o comando abaixo e as devidas credenciais de acesso, é possível subir o am
 ```
 aws ec2 run-instances --image-id ami-e3106686 --instance-type c4.large --subnet-id ${SUBNET_ID} --security-group-ids ${SGROUP_IDS}  --key-name ${KEY_NAME} --associate-public-ip-address --user-data "https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/aws/user-data.sh" --count 1
 ```
-Para rodar o comando acima, é necessário instalar o AWS CLI (https://aws.amazon.com/pt/cli/) e configurar as credenciais de sua conta na amazon (``` aws configure ```).
+Para rodar o comando acima, é necessário instalar o AWS CLI (https://aws.amazon.com/pt/cli/) e configurar as credenciais de sua conta na Amazon (``` aws configure ```).
 
 ### Acessar Dashboard
 
