@@ -1,0 +1,5 @@
+SUBNET=
+SG_ID=
+KEY=
+
+aws ec2 run-instances --image-id ami-e3106686 --instance-type c4.large --subnet-id $SUBNET --security-group-ids $SG_ID  --key-name $KEY --associate-public-ip-address --user-data "https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/aws/user-data.sh" --count 1
