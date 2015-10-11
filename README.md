@@ -20,7 +20,7 @@ Seguem alguns serviços, ferramentas e plataformas que foram utilizados para con
 
 ### Requisitos
 
-* Sistema Operacional com 2GB de RAM
+* Sistema Operacional com 2GB de RAM e 5GB de espaço em disco
 * Instalar Docker v1.7.1
 
   CentOS: https://docs.docker.com/installation/centos/
@@ -84,6 +84,13 @@ O projeto possui 3 containers especificados no arquivo docker-compose.yml:
 docker logs -f edwcenipa_pdi_1
 docker logs -f edwcenipa_biserver_1
 ```
+A instalação pode mais de 30 minutos, dependo da configuração do servidor e da largura de banda da Internet. A instalação completa é de aproximadamente 3GB. 
+
+Com o comando abaixo e as devidas credenciais de acesso, é possível subir o ambiente em menos de 10 minutos.
+```
+aws ec2 run-instances --image-id ami-e3106686 --instance-type c4.large --subnet-id ${SUBNET_ID} --security-group-ids ${SGROUP_IDS}  --key-name ${KEY_NME} --associate-public-ip-address --user-data "https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/aws/user-data.sh" --count 1
+```
+
 
 ### Acessar Dashboard
 
