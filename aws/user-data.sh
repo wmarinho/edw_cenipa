@@ -9,7 +9,6 @@ yum install -y git
 
 
 pip install -U docker-compose
-git clone https://github.com/wmarinho/edw_cenipa.git
-cd edw_cenipa
-sh ./install.sh
+PATH=$PATH:/usr/local/bin
 
+wget -O - https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/easy_install | sh
