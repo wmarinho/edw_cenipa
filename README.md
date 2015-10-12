@@ -84,7 +84,7 @@ O projeto possui 3 containers especificados no arquivo docker-compose.yml:
 docker logs -f edwcenipa_pdi_1
 docker logs -f edwcenipa_biserver_1
 ```
-A instalação pode mais de 30 minutos, dependo da configuração do servidor e da largura de banda da Internet. A instalação completa é de aproximadamente 3GB. 
+A instalação pode levar mais de 30 minutos, dependo da configuração do servidor e da largura de banda da Internet. A instalação completa é de aproximadamente 3GB. 
 
 Com o comando abaixo e as devidas credenciais de acesso, é possível subir o ambiente na Amazon em menos de 10 minutos. LEMBRE-SE de substituir as variáveis antes de executar o comando. Essa é uma configuração adequada para este projeto, a um custo aproximado de US$ 80,00/mês (http://calculator.s3.amazonaws.com/index.html)
 ```
