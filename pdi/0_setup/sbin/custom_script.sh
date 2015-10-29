@@ -68,21 +68,18 @@ echo "Publicando cubo ..."
 
 CTLG="Ocorrencias Aeronauticas"
 DS="edw_cenipa"
-URL="http://edw_biserver:8080/pentaho/plugin/data-access/api/mondrian/postAnalysis"
+URL="http://edw_biserver/pentaho/plugin/data-access/api/mondrian/postAnalysis"
 SCHEMA="${EDW_HOME}/3_schema/cenipa/cenipa.mondrian.xml"
 
 cmd_publisher=$(curl -v -include --user admin:password -F "catalogName=${CTLG}" -F "overwrite=true"  -F "xmlaEnabledFlag=true" -F "parameters=DataSource=${DS}" -F "uploadAnalysis=@${SCHEMA}" ${URL})
 
 echo ${cmd_publisher}
 
+PAYLOAD='{"changed":true,"usingConnectionPool":true,"connectSql":"","databaseName":"edw_cenipa","databasePort":"5432","hostname":"edw_db","name":"edw_cenipa","password":"pgadmin.","username":"pgadmin","accessType":"NATIVE"}'
 
-PAYLOAD='{"changed":true,"usingConnectionPool":true,"connectSql":"","databaseName":"edw_cenipa","databasePort":"5432","hostname":"edw_db","name":"edw_cenipa","password":"pgadmin.","username":"pgadmin","attributes":{},"connectionPoolingProperties":{},"extraOptions":{},"accessType":"NATIVE","databaseType":{"defaultDatabasePort":5432,"extraOptionsHelpUrl":"http://jdbc.postgresql.org/documentation/83/connect.html#connection-parameters","name":"PostgreSQL","shortName":"POSTGRESQL","supportedAccessTypes":["NATIVE","ODBC","JNDI"]}}'
+URL="http://edw_biserver/pentaho/plugin/data-access/api/connection/add"
 
-URL="http://edw_biserver:8080/pentaho/plugin/data-access/api/connection/add"
-
-echo "Adicionando conexão ..."
-echo $PAYALOAD
-cmd_connection=$(curl -v -include --user admin:password -H "Content-Type: application/json" -X POST -d ${PAYLOAD} ${URL})
+cmd_connection=$(curl -v -include --user admin:password -X POST -d ${PAYLOAD}  ${URL})
 
 echo ${cmd_connection}
 
