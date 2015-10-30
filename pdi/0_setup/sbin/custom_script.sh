@@ -79,6 +79,7 @@ PAYLOAD='{"changed":true,"usingConnectionPool":true,"connectSql":"","databaseNam
 
 URL="http://edw_biserver:8080/pentaho/plugin/data-access/api/connection/add"
 
+
 echo "Adicionando conexão ..."
 echo $PAYALOAD
 cmd_connection=$(curl -v -include --user admin:password -H "Content-Type: application/json" -X POST -d ${PAYLOAD} ${URL})
