@@ -75,7 +75,6 @@ cmd_publisher=$(curl -v -include --user admin:password -F "catalogName=${CTLG}" 
 
 echo ${cmd_publisher}
 
-
 PAYLOAD='{"changed":true,"usingConnectionPool":true,"connectSql":"","databaseName":"edw_cenipa","databasePort":"5432","hostname":"edw_db","name":"edw_cenipa","password":"pgadmin.","username":"pgadmin","attributes":{},"connectionPoolingProperties":{},"extraOptions":{},"accessType":"NATIVE","databaseType":{"defaultDatabasePort":5432,"extraOptionsHelpUrl":"http://jdbc.postgresql.org/documentation/83/connect.html#connection-parameters","name":"PostgreSQL","shortName":"POSTGRESQL","supportedAccessTypes":["NATIVE","ODBC","JNDI"]}}'
 
 URL="http://edw_biserver:8080/pentaho/plugin/data-access/api/connection/add"
