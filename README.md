@@ -63,6 +63,15 @@ PATH=$PATH:/usr/local/bin
 wget -O - https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/easy_install | sh
 ```
 
+### Instalação rápida do Docker no Ubuntu Server 14.04
+
+```
+sudo wget https://raw.githubusercontent.com/it4biz/ubuntu-docker-installer/master/ubuntu-docker-installer.sh
+sh ubuntu-docker-installer.sh
+```
+
+
+
 ### Verificar execução dos containers
 ```
 $ docker ps
