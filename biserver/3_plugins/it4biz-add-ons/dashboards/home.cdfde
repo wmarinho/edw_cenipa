@@ -1,0 +1,738 @@
+{
+ "layout": {
+  "title": "principal",
+  "rows": [
+   {
+    "id": "4e3814f9-2e83-d40f-453d-a88d0da255fb",
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "style",
+      "type": "Id"
+     },
+     {
+      "name": "resourceCode",
+      "value": "/*\r\n.container {\r\n    width: 98%;\r\n} \r\n*/\r\n.carousel-caption{\r\n    color : black;    \r\n} ",
+      "type": "Resource"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "7acd2c7f-151f-ec94-701d-37cfa40b0458",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "contentPrincipal",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "b8b8786e-dab7-c3df-287e-98188e08fd43",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "7acd2c7f-151f-ec94-701d-37cfa40b0458",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<ol class=\"breadcrumb\">\n    <li>Home</li>    \n</ol>\n\n<div id=\"body-content\">\n    <h1>IT4biz AddOns plugin</h1>\n    <hr class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n   \n</div>\n\n \n ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "visible-print-block",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "d7761af9-e845-b311-d734-e19b8dce8095",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "content",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "eab8693c-e05b-660d-a54f-be0531a04707",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "d7761af9-e845-b311-d734-e19b8dce8095",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<!-- Nav tabs -->\r\n<ul class=\"nav nav-tabs\" role=\"tablist\">\r\n    <li class=\"active\">\r\n        <a href=\"#personalize-biserver\" role=\"tab\" data-toggle=\"tab\">\r\n            Personalizar BI-server\r\n        </a>        \r\n    </li>\r\n    <li>       \r\n        <a href=\"#saikuchartplus\" role=\"tab\" data-toggle=\"tab\">\r\n            Saiku Chart Plus\r\n        </a>\r\n    </li>\r\n    <li>       \r\n        <a href=\"#pentahoceaudit\" role=\"tab\" data-toggle=\"tab\">\r\n            Pentaho CE Audit\r\n        </a>\r\n    </li>\r\n    <li>       \r\n        <a href=\"#pentahoperformancemonitoring\" role=\"tab\" data-toggle=\"tab\">\r\n            Pentaho Performance Monitoring \r\n        </a>\r\n    </li>\r\n</ul>\r\n    \r\n<!-- Tab panes -->\r\n<div class=\"tab-content\">\r\n    <!-- start div content personalize-biserver -->\r\n    <div class=\"tab-pane fade active in\" id=\"personalize-biserver\">\r\n        <div style=\"margin-top:10px;\">\r\n            <div class=\"form-group\">\r\n                <label>Logos e imagens <small>(mova para este diret&oacute;rio as logos e imagens especif&iacute;cas do projeto)</small></label>\r\n                <table class=\"table table-bordered table-striped\">\r\n                    <thead>\r\n                        <tr>\r\n                            <th>Arquivo</th>\r\n                            <th>Descri&ccedil;&atilde;o</th>\r\n                        </tr>\r\n                    </thead>\r\n                    <tbody>\r\n                        <tr>\r\n                          <th scope=\"row\"><code>it4biz-add-ons/features/personalize-biserver/login-crystal-bg.jpeg</code></th>\r\n                          <td>Imagem de fundo da tela de login (1255X663)</td>\r\n                        </tr>\r\n                        <tr>\r\n                          <th scope=\"row\"><code>it4biz-add-ons/features/personalize-biserver/puc-login-logo.png</code></th>\r\n                          <td>Logo da tela de login (360x93)</td>\r\n                        </tr>\r\n                        <tr>\r\n                          <th scope=\"row\"><code>it4biz-add-ons/features/personalize-biserver/favicon.ico</code></th>\r\n                          <td>Favicon (48X48)</td>\r\n                        </tr>\r\n                    </tbody>\r\n                </table>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label>Titulo principal</label>\r\n                <div id=\"main-title\"></div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label>Titulo secund&aacute;rio</label>\r\n                <div id=\"secondary-title\"></div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <div id=\"button-atualizar\"></div>\r\n            </div>\r\n        </div>\r\n    </div> <!-- end start div content personalize-biserver -->    \r\n    \r\n    <!-- start div content saikuchartplus -->\r\n    <div class=\"tab-pane\" id=\"saikuchartplus\">\r\n        <div style=\"margin-top:10px;\" class=\"container\">\r\n            <div id=\"carousel-saiku-chart-plus\" class=\"carousel slide col-md-8 col-md-offset-1\" data-ride=\"carousel\">\r\n                  <ol class=\"carousel-indicators\">\r\n                    <li data-target=\"#carousel-saiku-chart-plus\" data-slide-to=\"0\" class=\"active\"></li>\r\n                    <li data-target=\"#carousel-saiku-chart-plus\" data-slide-to=\"1\" class=\"\"></li>\r\n                    <li data-target=\"#carousel-saiku-chart-plus\" data-slide-to=\"2\" class=\"\"></li>\r\n                  </ol>\r\n                  <div class=\"carousel-inner\" role=\"listbox\">\r\n                    <div class=\"item active\">\r\n                      <img src=\"https://a.fsdn.com/con/app/proj/saikuchartplus/screenshots/geoChartChartPlus.png\" data-holder-rendered=\"true\">\r\n                        <div class=\"carousel-caption\">\r\n                            <!-- <h3>Mapas</h3> \r\n                            <p>Integra&ccedil;&atilde; com a API GeoChart do Google</p>-->\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"item\">\r\n                      <img src=\"https://a.fsdn.com/con/app/proj/saikuchartplus/screenshots/geoMapChartPlus.png\" data-holder-rendered=\"true\">\r\n                    </div>\r\n                    <div class=\"item\">\r\n                      <img src=\"https://a.fsdn.com/con/app/proj/saikuchartplus/screenshots/PieChartPlus.png\" data-holder-rendered=\"true\">\r\n                    </div>\r\n                  </div>\r\n                  <a class=\"left carousel-control\" href=\"#carousel-saiku-chart-plus\" role=\"button\" data-slide=\"prev\">\r\n                    <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\r\n                    <span class=\"sr-only\">Anterior</span>\r\n                  </a>\r\n                  <a class=\"right carousel-control\" href=\"#carousel-saiku-chart-plus\" role=\"button\" data-slide=\"next\">\r\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n                    <span class=\"sr-only\">Pr&oacute;ximo</span>\r\n                  </a>\r\n            </div>\r\n            \r\n            <div class=\"form-group col-md-3\">\r\n                <p><h3>Saiku Chart Plus</h3> &eacute; um projeto open-source que ajuda usu&aacute;rios\r\n                de BI Pentaho a criar diferentes tipos de mapas e gr&aacute;ficos baseado nos projetos Saiku, Highcharts e Google Maps.</p>\r\n                <p>Para saber mais acesse <a target='NO_BLANK' href='http://it4biz.github.io/SaikuChartPlus/'>nosso site</a>.\r\n    \t\r\n                <div id=\"button-saikuchartplus-instalar\">\r\n                    <button type=\"button\" class=\"btn btn-default pull-right\">Instalar</button>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <!-- end div content saikuchartplus -->\r\n    \r\n    <!-- start div content pentahoceaudit -->\r\n    <div class=\"tab-pane\" id=\"pentahoceaudit\">\r\n\t\t<div style=\"margin-top:10px;\" class=\"container\">\r\n            <div id=\"carousel-pentahoceaudit\" class=\"carousel slide col-md-8 col-md-offset-1\" data-ride=\"carousel\">\r\n                  <ol class=\"carousel-indicators\">\r\n                    <li data-target=\"#carousel-pentahoceaudit\" data-slide-to=\"0\" class=\"active\"></li>\r\n                    <li data-target=\"#carousel-pentahoceaudit\" data-slide-to=\"1\" class=\"\"></li>\r\n                  </ol>\r\n                  <div class=\"carousel-inner\" role=\"listbox\">\r\n                    <div class=\"item active\">\r\n                      <img src=\"https://a.fsdn.com/con/app/proj/pentahoceaudit/screenshots/screen_dashboard-1.png\" data-holder-rendered=\"true\">                        \r\n                    </div>\r\n                    <div class=\"item\">\r\n                      <img src=\"https://a.fsdn.com/con/app/proj/pentahoceaudit/screenshots/analysis_one_ok.png\" data-holder-rendered=\"true\">\r\n                    </div>                    \r\n                  </div>\r\n                  <a class=\"left carousel-control\" href=\"#carousel-pentahoceaudit\" role=\"button\" data-slide=\"prev\">\r\n                    <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\r\n                    <span class=\"sr-only\">Anterior</span>\r\n                  </a>\r\n                  <a class=\"right carousel-control\" href=\"#carousel-pentahoceaudit\" role=\"button\" data-slide=\"next\">\r\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n                    <span class=\"sr-only\">Pr&oacute;ximo</span>\r\n                  </a>\r\n            </div>\r\n            \r\n            <div class=\"form-group col-md-3\">\r\n                <p><h3>Pentaho CE Audit</h3> &eacute; um projeto open-source que ajuda usu&aacute;rios\r\n                de BI Pentaho a visualizar estat&iacute;sticas como:</p>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li>Quem esta acessando o portal de BI (Pentaho BI Server)?</li>\r\n\t\t\t\t\t<li>Quando os usu&aacute;rios mais utilizam o portal?</li>\r\n\t\t\t\t\t<li>Qual &eacute; o conte&uacute;do mais acessado?</li>\r\n\t\t\t\t\t<li>E v&aacute;rias outras informa&ccedil;&otilde;es dispon&iacute;veis para consumo atrav&eacute;s de um cubo OLAP.</li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t\r\n                <p>Para saber mais acesse <a target='NO_BLANK' href='https://github.com/it4biz/pentaho-ce-audit/'>nosso site</a>.\r\n\t\t\r\n                <div id=\"button-pentahoceaudit-instalar\">\r\n                    <button type=\"button\" class=\"btn btn-default pull-right\">Instalar</button>\r\n                </div>\r\n            </div>\r\n        </div>\t\t\r\n    </div>\r\n    <!-- end div content pentahoceaudit -->\r\n\t\r\n    <!-- start div content pentahoperformancemonitoring -->\r\n    <div class=\"tab-pane\" id=\"pentahoperformancemonitoring\">\r\n\t\t<div style=\"margin-top:10px;\" class=\"container\">\r\n            <div id=\"carousel-pentahoperformancemonitoring\" class=\"carousel slide col-md-8 col-md-offset-1\" data-ride=\"carousel\">\r\n                  <ol class=\"carousel-indicators\">\r\n                    <li data-target=\"#carousel-pentahoperformancemonitoring\" data-slide-to=\"0\" class=\"active\"></li>\r\n                    <li data-target=\"#carousel-pentahoperformancemonitoring\" data-slide-to=\"1\" class=\"\"></li>\r\n                  </ol>\r\n                  <div class=\"carousel-inner\" role=\"listbox\">\r\n                    <div class=\"item active\">\r\n                      <img src=\"https://a.fsdn.com/con/app/proj/pentaho-performance-monitoring/screenshots/dashboard_screen-4.png\" data-holder-rendered=\"true\">                        \r\n                    </div>\r\n                    <div class=\"item\">\r\n                      <img src=\"https://a.fsdn.com/con/app/proj/pentaho-performance-monitoring/screenshots/dashboard_screen2.png\" data-holder-rendered=\"true\">\r\n                    </div>                    \r\n                  </div>\r\n                  <a class=\"left carousel-control\" href=\"#carousel-pentahoperformancemonitoring\" role=\"button\" data-slide=\"prev\">\r\n                    <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\r\n                    <span class=\"sr-only\">Anterior</span>\r\n                  </a>\r\n                  <a class=\"right carousel-control\" href=\"#carousel-pentahoperformancemonitoring\" role=\"button\" data-slide=\"next\">\r\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n                    <span class=\"sr-only\">Pr&oacute;ximo</span>\r\n                  </a>\r\n            </div>\r\n            \r\n            <div class=\"form-group col-md-3\">\r\n                <p><h3>Pentaho Performance Monitoring</h3> &eacute; um projeto open-source que ajuda usu&aacute;rios\r\n                de BI Pentaho a visualizar estat&iacute;sticas de performance como:</p>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li>Consultas <i>SQL</i> e <i>MDX</i> mais realizadas?</li>\r\n\t\t\t\t\t<li>Quais s&atilde;o os usu&aacute;rios que mais utilizam o portal de BI?</li>\r\n\t\t\t\t\t<li>Quais consultas demoram mais para serem realizadas?</li>\r\n\t\t\t\t\t<li>E v&aacute;rias outras informa&ccedil;&otilde;es dispon&iacute;veis para consumo atrav&eacute;s de um cubo OLAP.</li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t\r\n                <p>Para saber mais acesse <a target='NO_BLANK' href='https://github.com/it4biz/pentaho-performance-monitoring'>nosso site</a>.\r\n\t\t\r\n                <div id=\"button-pentahoperformancemonitoring-instalar\">\r\n                    <button type=\"button\" class=\"btn btn-default pull-right\">Instalar</button>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\t<!-- end div content pentahoperformancemonitoring -->\r\n</div> \r\n<!-- end nav tabs --> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "7b582e35-7ab5-447c-770a-f52307c991cf",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "modal",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "9768a30b-3a61-c889-b0ed-0b01311b7ea1",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "7b582e35-7ab5-447c-770a-f52307c991cf",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div id=\"modalMessage\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modalMessageLabel\" aria-hidden=\"true\">\r\n     <div  class=\"modal-dialog modal-sm\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">x</span></button>\r\n            Mensagem do sistema\r\n        </div>\r\n        <div class=\"modal-body\">            \r\n            <div id=\"modalMessage-div\"></div>\r\n        </div>\r\n      </div><!-- /.modal-content -->\r\n    </div><!-- /.modal-dialog -->  \r\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   }
+  ]
+ },
+ "components": {
+  "rows": [
+   {
+    "id": "SCRIPT",
+    "name": "Scripts",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Scripts",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "286d357a-618b-fa70-56f5-a02cf2d47b28",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "value": "installPentahoPerformanceMonitoring",
+      "type": "Id"
+     },
+     {
+      "name": "javaScript",
+      "value": "$(\"#button-pentahoperformancemonitoring-instalar button\").click(function(){\r\n    //Dashboards.incrementRunningCalls();  \r\n    $.post(\"/pentaho/plugin/marketplace/api/plugin/pentaho-performance-monitoring/TRUNK\", function( data ) {\r\n        if(data.statusMessage.code === 'PLUGIN_INSTALLED'  )\r\n            $('#modalMessage-div').html('<div class=\"alert alert-success\"><b>Pentaho Performance Monitoring instalado com sucesso!</b><br>Reinicie o servi&ccedil;o Pentaho.</div>');\r\n        else\r\n            $('#modalMessage-div').html('<div class=\"alert alert-danger\"><b>Erro ao instalar!</b><br>Entre em contato pelo email info@it4biz.com.br</div>');\r\n        \r\n        //Dashboards.decrementRunningCalls();\r\n        $(\"#modalMessage\").modal('show');    \r\n    });     \r\n});\r\n ",
+      "type": "JavaScript"
+     }
+    ]
+   },
+   {
+    "id": "025ab417-ac87-3d8d-300d-4485dc5e773d",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "value": "installPentahoCeAudit",
+      "type": "Id"
+     },
+     {
+      "name": "javaScript",
+      "value": "$(\"#button-pentahoceaudit-instalar button\").click(function(){\r\n    //Dashboards.incrementRunningCalls();  \r\n    $.post(\"/pentaho/plugin/marketplace/api/plugin/pentaho-ce-audit/STABLE\", function( data ) {\r\n        if(data.statusMessage.code === 'PLUGIN_INSTALLED'  )\r\n            $('#modalMessage-div').html('<div class=\"alert alert-success\"><b>Pentaho CE Audit instalado com sucesso!</b><br>Reinicie o servi&ccedil;o Pentaho.</div>');\r\n        else\r\n            $('#modalMessage-div').html('<div class=\"alert alert-danger\"><b>Erro ao instalar!</b><br>Entre em contato pelo email info@it4biz.com.br</div>');\r\n        \r\n        //Dashboards.decrementRunningCalls();\r\n        $(\"#modalMessage\").modal('show');    \r\n    });     \r\n});\r\n ",
+      "type": "JavaScript"
+     }
+    ]
+   },
+   {
+    "id": "ce2352cc-945e-8b2b-b74b-6a83c8b765ef",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "value": "installSaikuChartPlus",
+      "type": "Id"
+     },
+     {
+      "name": "javaScript",
+      "value": "$(\"#button-saikuchartplus-instalar button\").click(function(){\r\n    //Dashboards.incrementRunningCalls();  \r\n    $.post(\"/pentaho/plugin/marketplace/api/plugin/saiku-chart-plus/vSaiku3\", function( data ) {\r\n        if(data.statusMessage.code === 'PLUGIN_INSTALLED'  )\r\n            $('#modalMessage-div').html('<div class=\"alert alert-success\"><b>Saiku Chart Plus instalado com sucesso!</b><br>Reinicie o servi&ccedil;o Pentaho.</div>');\r\n        else\r\n            $('#modalMessage-div').html('<div class=\"alert alert-danger\"><b>Erro ao instalar!</b><br>Entre em contato pelo email info@it4biz.com.br</div>');\r\n        \r\n        //Dashboards.decrementRunningCalls();\r\n        $(\"#modalMessage\").modal('show');    \r\n    });     \r\n});\r\n ",
+      "type": "JavaScript"
+     }
+    ]
+   },
+   {
+    "id": "8cebfab3-d1ae-f1bc-8077-ffa38d618c02",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "value": "traducao_table_component",
+      "type": "Id"
+     },
+     {
+      "name": "javaScript",
+      "value": "var oLanguage = {\r\n    'sProcessing' : 'Executando...',\r\n    'sLengthMenu' : 'Mostrando _MENU_ registos',\r\n    'sZeroRecords' : 'Não há dados!',\r\n    'sInfo' : 'Mostrando de _START_ a _END_ de _TOTAL_ registos',\r\n    'sInfoEmpty' : 'Mostrando 0 de 0 registros',\r\n    'sInfoFiltered' : '(_MAX_ registros filtrados do total)',\r\n    'sInfoPostFix' : '',\r\n    'sSearch' : 'Localizar:',\r\n    'sUrl' : '',\r\n    'oPaginate' : \r\n        {\r\n        'sFirst' : 'Primeiro',\r\n        'sPrevious' : 'Anterior',\r\n        'sNext' : 'Próximo',\r\n        'sLast' : 'Último'\r\n        }\r\n}; ",
+      "type": "JavaScript"
+     }
+    ]
+   },
+   {
+    "id": "b2852c66-28f1-89c5-1be9-da0513d372a5",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "value": "addCommas",
+      "type": "Id"
+     },
+     {
+      "name": "javaScript",
+      "value": "function addCommas(v){    \t\r\n\tvar nStr= v.toFixed(2)+'';\r\n\t\tx  = nStr.split('.');\r\n\t\tx1 = x[0];\r\n\t\tx2 = x.length > 1 ? ',' + x[1] : '';\r\n\tvar rgx = /(\\d+)(\\d{3})/;\r\n\twhile (rgx.test(x1)) {\r\n\t\tx1 = x1.replace(rgx, '$1' + '.' + '$2');\r\n\t}\r\n\treturn x1;\t\t\r\n} ",
+      "type": "JavaScript"
+     }
+    ]
+   },
+   {
+    "id": "GENERIC",
+    "name": "Generic",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Generic",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "08789fb5-201a-131c-e6dd-a637b52521a0",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "MAIN_TITLE",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "IT4biz BI Services",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "ee288069-24a3-735e-5078-834d8f39449d",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "SECONDARY_TITLE",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "O seu gestor de BI sob demanda",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "SELECTORS",
+    "name": "Selects",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Selects",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "223823da-0d16-ad51-a267-21f061ce63da",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mainTitleInputComponent",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:MAIN_TITLE}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "main-title",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function f(){\r\n    $('#'+this.htmlObject +' input').addClass('form-control');\r\n    //$('#'+this.htmlObject+' .btn-group').addClass('hidden-xs');\r\n    \r\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "65cf9248-a6f2-103a-02da-da234dd2183f",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "secondaryTitleInputComponent",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:SECONDARY_TITLE}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "secondary-title",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function f(){\r\n    $('#'+this.htmlObject +' input').addClass('form-control');\r\n    //$('#'+this.htmlObject+' .btn-group').addClass('hidden-xs');\r\n    \r\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "OTHERCOMPONENTS",
+    "name": "Others",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Others",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "7805f5db-a71e-4687-65fc-cdaf57403616",
+    "type": "ComponentsbuttonComponent",
+    "typeDesc": "Button Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "atualizarButtonComponent",
+      "type": "Id"
+     },
+     {
+      "name": "label",
+      "value": "Atualizar",
+      "type": "String"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "actionParameters",
+      "value": "[[\"MAIN_TITLE\",\"MAIN_TITLE\"],[\"SECONDARY_TITLE\",\"SECONDARY_TITLE\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "expression",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "failureCallback",
+      "value": "function error(){    \r\n    $('#modalMessage-div').html('<div class=\"alert alert-danger\"><b>Erro ao atualizar!</b><br>Entre em contato pelo email info@it4biz.com.br</div>');\r\n    $(\"#modalMessage\").modal('show');\r\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "successCallback",
+      "value": "function sucess(){\n    \n    $('#modalMessage-div').html('<div class=\"alert alert-success\"><b>Atualizado com sucesso!</b><br>Reinicie o servi&ccedil;o Pentaho.</div>');\n    $(\"#modalMessage\").modal('show');\n    \n} \n ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "Datasource",
+      "value": "ds_job_personalize",
+      "type": "Datasource"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "buttonStyle",
+      "value": "themeroller",
+      "type": "TableStyle"
+     },
+     {
+      "name": "htmlObject",
+      "value": "button-atualizar",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function f(){\r\n\r\n    $('#'+this.htmlObject+' button').addClass('btn btn-default pull-right'); \r\n}\r\n ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   }
+  ]
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "IT4BIZ-ADD-ONS_CPKENDPOINTS",
+    "name": "IT4BIZ-ADD-ONS Endpoints",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "IT4BIZ-ADD-ONS Endpoints",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "958ca39e-ab08-da73-7e77-1d3bd4254df0",
+    "type": "Componentsit4bizaddons_job_personalize_layout_CPKENDPOINT",
+    "typeDesc": "job_personalize_layout Endpoint",
+    "parent": "IT4BIZ-ADD-ONS_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "ds_job_personalize",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Inferred",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "it4biz-add-ons",
+    "meta_endpoint": "job_personalize_layout"
+   }
+  ]
+ },
+ "filename": "/system/it4biz-add-ons/dashboards/home.cdfde"
+}

@@ -119,6 +119,8 @@ Senha: password
 ![](https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/demo/cenipa-demo.gif)
 
 
-
+##Docker Commands
+sudo docker-compose up -d<BR>
+docker-compose start<BR>
 
 
