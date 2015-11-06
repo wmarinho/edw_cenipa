@@ -67,7 +67,7 @@ wget -O - https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/easy_inst
 
 ```
 sudo wget https://raw.githubusercontent.com/it4biz/ubuntu-docker-installer/master/ubuntu-docker-installer.sh
-sh ubuntu-docker-installer.sh
+sudo sh ubuntu-docker-installer.sh
 ```
 
 
