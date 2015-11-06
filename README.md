@@ -118,6 +118,9 @@ Senha: password
 
 ![](https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/demo/cenipa-demo.gif)
 
+## Slideshare
+
+![Construindo um data warehouse com Pentaho e Docker](http://www.slideshare.net/wmarinho/construindo-um-data-warehouse-com-pentaho-e-docker)
 
 ##Docker Commands
 sudo docker-compose up -d<BR>
