@@ -67,7 +67,7 @@ wget -O - https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/easy_inst
 
 ```
 sudo wget https://raw.githubusercontent.com/it4biz/ubuntu-docker-installer/master/ubuntu-docker-installer.sh
-sh ubuntu-docker-installer.sh
+sudo sh ubuntu-docker-installer.sh
 ```
 
 
@@ -113,11 +113,14 @@ login: Admin
 
 Senha: password
 
+
 ## Demo
 
 ![](https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/demo/cenipa-demo.gif)
 
 
-
+##Docker Commands
+sudo docker-compose up -d<BR>
+docker-compose start<BR>
 
 
