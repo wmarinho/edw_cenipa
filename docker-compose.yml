@@ -2,10 +2,11 @@ pdi:
   image: image_cenipa/pdi
   links:
      - biserver:edw_biserver
+     - db:edw_db
   volumes:
     - /data/stage:/tmp/stage
   environment:
-    - PGHOST=172.17.42.1
+    - PGHOST=edw_db
     - PGUSER=pgadmin
     - PGPASSWORD=pgadmin.
     - PENTAHO_DI_JAVA_OPTIONS=-Xmx2014m -XX:MaxPermSize=256m
@@ -25,8 +26,11 @@ biserver:
   stdin_open: true
   tty: true
 db:
-  image: wmarinho/postgresql:9.3
-  ports:
-    - "5432:5432"
+  image: postgres:9.3
+  environment:
+    - POSTGRES_USER=pgadmin
+    - POSTGRES_PASSWORD=pgadmin.
+#  ports:
+#    - "5432:5432"
   stdin_open: false
   tty: true
