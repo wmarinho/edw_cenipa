@@ -120,7 +120,7 @@ Senha: password
 
 
 ##Docker Commands
-sudo docker-compose up -d 
-docker-compose start
+sudo docker-compose up -d<BR>
+docker-compose start<BR>
 
 
