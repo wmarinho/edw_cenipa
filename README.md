@@ -122,7 +122,7 @@ Senha: password
 
 ## Slideshare
 
-[Construindo um data warehouse com Pentaho e Docker](http://pt.slideshare.net/wmarinho/building-a-data-warehouse-with-pentaho-and-docker-58940969)
+[Building a data warehouse with Pentaho and Docker](http://pt.slideshare.net/wmarinho/building-a-data-warehouse-with-pentaho-and-docker-58940969)
 
 ##Docker Commands
 sudo docker-compose up -d<BR>
