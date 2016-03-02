@@ -3,12 +3,12 @@
 
 EDW CENIPA  is a opensource project designed to enable analysis of aeronautical incidentes that occured in the brazilian civil aviation. The project uses techniques and BI tools that explore innovative low-cost technologies. Historically, Business Intelligence platforms are expensive and impracticable for small projects. BI projects require specialized skills and high development costs. This work aims to break this barrier.
 
-All analyzes are based on open data provided by CENIPA with historical events of the last 10 years :
+All analyzes are based on open data provided by CENIPA with historical events of the last 10 years:
 
-![](http://dados.gov.br/dataset/ocorrencias-aeronauticas-da-aviacao-civil-brasileira)
+http://dados.gov.br/dataset/ocorrencias-aeronauticas-da-aviacao-civil-brasileira
 
 The graphics were inspired by the report available on the link:
-![](http://www.cenipa.aer.mil.br/cenipa/index.php/estatisticas/estatisticas/panorama)
+http://www.cenipa.aer.mil.br/cenipa/index.php/estatisticas/estatisticas/panorama
 
 Here are some resources, tools and platforms that were used to develop and deploy the project
 
