@@ -1,7 +1,7 @@
 # EDW CENIPA 
 ## BI open source template to build a scalable data warehouse with open data provided by CENIPA
 
-EDW CENIPA  is a opensource project designed to enable analysis of aeronautical incidentes that occured in the brazilian civil aviation. The project uses techniques and BI tools that explore innovative low-cost technologies. Historically, Business Intelligence platforms are expensive and impracticable for small projects. BI projects require specialized skills and high development costs. This work aims to break this barrier.
+EDW CENIPA  is an opensource project designed to enable analysis of aeronautical incidentes that occured in the brazilian civil aviation. The project uses techniques and BI tools that explore innovative low-cost technologies. Historically, Business Intelligence platforms are expensive and impracticable for small projects. BI projects require specialized skills and high development costs. This work aims to break this barrier.
 
 All analyzes are based on open data provided by CENIPA with historical events of the last 10 years:
 
