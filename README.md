@@ -1,55 +1,57 @@
 # EDW CENIPA 
-## Modelo BI open source para construção de um data warehouse com dados abertos do CENIPA
+## BI open source template to build a data warehouse with open data provided by CENIPA
 
-EDW CENIPA é um projeto open source, criado para prover análises dinâmicas de ocorrências aeronáuticas, ocorridas na aviação civil brasileira. O projeto utiliza técnicas e ferramentas de BI, explorando tecnologias inovadoras e de baixo custo. Historicamente, plataformas de Business Intelligence são caras e inviáveis para pequenos projetos. Esses projetos exigem qualificação especializada e custos altos de desenvolvimento. Este trabalho tem a pretensão de quebrar um pouco esta barreira. O que não significa pouca dedicação, empenho e esforço. 
+EDW CENIPA  is a opensource project designed to enable analysis of aeronautical incidentes that occured in the brazilian civil aviation. The project uses techniques and BI tools that explore innovative low-cost technologies. Historically, Business Intelligence platforms are expensive and impracticable for small projects. BI projects require specialized skills and high development costs. This work aims to break this barrier.
 
-Todas as análises têm como base os dados abertos fornecidos pelo CENIPA, com histórico de ocorrências dos últimos 10 anos ( http://dados.gov.br/dataset/ocorrencias-aeronauticas-da-aviacao-civil-brasileira). Os gráficos foram inspirados no relatório disponibilizado no link http://www.cenipa.aer.mil.br/cenipa/index.php/estatisticas/estatisticas/panorama.
+All analyzes are based on open data provided by CENIPA with historical events of the last 10 years :
 
-Seguem alguns serviços, ferramentas e plataformas que foram utilizados para construir e testar este ambiente.
- 
-* Amazon Web Services - https://aws.amazon.com/ - Serviços de infraestrutura de nuvem
-* Sistema Operacional Linux - CentOS 6 / Ubuntu 14
-* Docker - https://www.docker.com/ - Plataforma aberta para construir e rodar aplicações distribuídas.
-* Pentaho - http://www.pentaho.com/ e  http://community.pentaho.com/ - Plataforma open source de Big Data, Data Integration e Business Analytics
+![](http://dados.gov.br/dataset/ocorrencias-aeronauticas-da-aviacao-civil-brasileira)
+
+The graphics were inspired by the report available on the link:
+![](http://www.cenipa.aer.mil.br/cenipa/index.php/estatisticas/estatisticas/panorama)
+
+Here are some resources, tools and platforms that were used to develop and deploy the project
+
+* Amazon Web Services - https://aws.amazon.com/ 
+* Linux Operating System - CentOS 6 / Ubuntu 14
+* GitHub - https://github.com/ - Powerful collaboration, code review, and code management foropen source and private projects
+* Docker - https://www.docker.com/ - An open platform for distributed applications for developers and sysadmins.
+* Pentaho - http://www.pentaho.com/ e http://community.pentaho.com/ - Big data integration and analytics solutions.
 
 ## Screenshot
 ### Visão geral das Ocorrências
 ![](https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/demo/RxCwvo8.png)
 
-## Instalação
+## Instalation
 
-### Requisitos
+### Requirements
 
+* Linux Operating System 4GB RAM and 10GB available hard disk space
+* Install Docker v1.7.1
+** CentOS: https://docs.docker.com/installation/centos/
+** Ubuntu: https://docs.docker.com/installation/ubuntulinux/
+** Mac : https://docs.docker.com/installation/mac/
+* Install Docker Compose v1.4.2 - https://docs.docker.com/compose/install/
 
-* Sistema Operacional com 2GB de RAM e 5GB de espaço em disco
-* Instalar Docker v1.7.1
-
-  CentOS: https://docs.docker.com/installation/centos/
-
-  Ubuntu: https://docs.docker.com/installation/ubuntulinux/
-
-  Mac : https://docs.docker.com/installation/mac/
-
-* Instalar Docker Compose v1.4.2 - https://docs.docker.com/compose/install/
 ```
 curl -L https://github.com/docker/compose/releases/download/1.4.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 ```
 
-* Instalar o GIT
+* Install o GIT
 
 https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-### Instalar a partir do repositório do projeto
+### Installation from source
 
 ```
 git clone https://github.com/wmarinho/edw_cenipa.git
 cd edw_cenipa
 sh install.sh
 ```
-ou
+or
 
-### Instalação rápida no CentOS
+### Fast install on CentOS
 
 ```
 yum update -y
@@ -63,7 +65,7 @@ PATH=$PATH:/usr/local/bin
 wget -O - https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/easy_install | sh
 ```
 
-### Instalação rápida do Docker no Ubuntu Server 14.04
+### Fast install on Ubuntu Server 14.04
 
 ```
 sudo wget https://raw.githubusercontent.com/it4biz/ubuntu-docker-installer/master/ubuntu-docker-installer.sh
@@ -72,7 +74,7 @@ sudo sh ubuntu-docker-installer.sh
 
 
 
-### Verificar execução dos containers
+### Check if containers are running
 ```
 $ docker ps
 
@@ -82,30 +84,30 @@ CONTAINER ID        IMAGE                          COMMAND                CREATE
 7787dcfe49df        wmarinho/postgresql:9.3        "/usr/lib/postgresql   2 hours ago         Up 2 hours          0.0.0.0:5432->5432/tcp   edwcenipa_db_1
 ```
 
-O projeto possui 3 containers especificados no arquivo docker-compose.yml:
+The project has 3 containers :
 
-* edwcenipa_db_1 - Container com Banco de Dados PostgreSQL
-* edwcenipa_pdi_1 - Container com instlação do Pentaho Data Integrator (Kettle) para download e carga dados para o DW
-* edwcenipa_biserver_1 - Container com instalação do Pentaho Business Analytics (BI Server)
+* edwcenipa_db_1 – PostgreSQL database container
+* edwcenipa_pdi_1 – Pentaho Data Integration container
+* edwcenipa_biserver_1 – Pentaho BI Server container
 
-### Verificar logs do PDI e do BI Server
+
+### Check PDI and BI Server logs
 
 ```
 docker logs -f edwcenipa_pdi_1
 docker logs -f edwcenipa_biserver_1
 ```
 
-A instalação pode levar mais de 30 minutos, dependo da configuração do servidor e da largura de banda da Internet. A instalação completa é de aproximadamente 3GB. 
+Installation can take over 30 minutes , depending of server configuration and Internet bandwidth . 
 
-Com o comando abaixo e as devidas credenciais de acesso, é possível subir o ambiente na Amazon em menos de 10 minutos. LEMBRE-SE de substituir as variáveis antes de executar o comando. Essa é uma configuração adequada para este projeto, a um custo aproximado de US$ 80,00/mês (http://calculator.s3.amazonaws.com/index.html)
+With the following command and the appropriate credentials , you can run the project on Amazon Web Services. REMEMBER to replace the variables before running the command (check the parameters in the AWS console) . 
+
 ```
 aws ec2 run-instances --image-id ami-e3106686 --instance-type c4.large --subnet-id ${SUBNET_ID} --security-group-ids ${SGROUP_IDS}  --key-name ${KEY_NAME} --associate-public-ip-address --user-data "https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/aws/user-data.sh" --count 1
 ```
-Para rodar o comando acima, é necessário instalar o AWS CLI (https://aws.amazon.com/pt/cli/) e configurar as credenciais de sua conta na Amazon (``` aws configure ```).
+The command above require AWS CLI (https://aws.amazon.com/pt/cli/) and AWS credentials (``` aws configure ```).
 
-### Acessar Dashboard
-
-* Caso não seja uma instalação local, altere o endereço abaixo com o IP ou domínio do servidor onde foi feita a instalação.
+### Dashboard URL
 
 http://localhost/pentaho/plugin/cenipa/api/ocorrencias
 
@@ -120,7 +122,7 @@ Senha: password
 
 ## Slideshare
 
-[Construindo um data warehouse com Pentaho e Docker](http://www.slideshare.net/wmarinho/construindo-um-data-warehouse-com-pentaho-e-docker)
+[Construindo um data warehouse com Pentaho e Docker](http://pt.slideshare.net/wmarinho/building-a-data-warehouse-with-pentaho-and-docker-58940969)
 
 ##Docker Commands
 sudo docker-compose up -d<BR>

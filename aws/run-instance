@@ -2,4 +2,4 @@ SUBNET=
 SG_ID=
 KEY=
 
-aws ec2 run-instances --image-id ami-e3106686 --instance-type c4.large --subnet-id $SUBNET --security-group-ids $SG_ID  --key-name $KEY --associate-public-ip-address --user-data "https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/aws/user-data.sh" --count 1
+aws ec2 run-instances --image-id ami-e3106686 --instance-type c4.large --subnet-id subnet-7e6bab55 --security-group-ids sg-2c3bdc4a  --key-name pentaho-demo --associate-public-ip-address --user-data "https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/aws/user-data.sh" --count 1
