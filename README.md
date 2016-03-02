@@ -19,7 +19,7 @@ Here are some resources, tools and platforms that were used to develop and deplo
 * Pentaho - http://www.pentaho.com/ e http://community.pentaho.com/ - Big data integration and analytics solutions.
 
 ## Screenshot
-### Visão geral das Ocorrências
+### Overview
 ![](https://raw.githubusercontent.com/wmarinho/edw_cenipa/master/demo/RxCwvo8.png)
 
 ## Instalation
