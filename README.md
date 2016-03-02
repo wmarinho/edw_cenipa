@@ -28,9 +28,9 @@ Here are some resources, tools and platforms that were used to develop and deplo
 
 * Linux Operating System 4GB RAM and 10GB available hard disk space
 * Install Docker v1.7.1
-** CentOS: https://docs.docker.com/installation/centos/
-** Ubuntu: https://docs.docker.com/installation/ubuntulinux/
-** Mac : https://docs.docker.com/installation/mac/
+	CentOS: https://docs.docker.com/installation/centos/
+	Ubuntu: https://docs.docker.com/installation/ubuntulinux/
+	Mac : https://docs.docker.com/installation/mac/
 * Install Docker Compose v1.4.2 - https://docs.docker.com/compose/install/
 
 ```
